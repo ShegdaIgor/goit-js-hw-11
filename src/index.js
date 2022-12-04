@@ -61,9 +61,11 @@ function addPictures() {
     if (+refs.gallery.children.length === +data.totalHits) {
       console.log(data.totalHits);
       refs.btnLoad.style.display = 'none';
-      Notiflix.Notify.info('These are the latest pictures for your request.');
+      Notiflix.Notify.info(
+        'We are sorry, but you have reached the end of search results.'
+      );
     } else {
-      Notiflix.Notify.success('More photos.');
+      Notiflix.Notify.success('Next page.');
     }
   });
 }
